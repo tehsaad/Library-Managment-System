@@ -21,16 +21,22 @@
     <ClCompile Include="LMS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Authorizer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+=======
+>>>>>>> 94e9b7a2f74ebe09b6fd888c20e8ab592196d9b3
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LMS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Authorizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> 94e9b7a2f74ebe09b6fd888c20e8ab592196d9b3
   </ItemGroup>
 </Project>

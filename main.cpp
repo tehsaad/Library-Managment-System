@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "LMS.h"
 //#include "SFMLUI.h"
 #include <iostream>
@@ -34,5 +35,15 @@ int main() {
         return 1;
     }
     launchApplication(system);
+=======
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello World!\n";
+    
+
+
+>>>>>>> 94e9b7a2f74ebe09b6fd888c20e8ab592196d9b3
     return 0;
 }

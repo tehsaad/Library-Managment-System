@@ -139,12 +139,18 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="Authorizer.cpp" />
+=======
+>>>>>>> 94e9b7a2f74ebe09b6fd888c20e8ab592196d9b3
     <ClCompile Include="main.cpp" />
     <ClCompile Include="LMS.cpp" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClInclude Include="Authorizer.h" />
+=======
+>>>>>>> 94e9b7a2f74ebe09b6fd888c20e8ab592196d9b3
     <ClInclude Include="LMS.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
