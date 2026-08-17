@@ -17,10 +17,10 @@
 mono_crash.*
 
 #Own
-.slnx
-.vsxproj
-.filters
-.user
+*.slnx
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
 
 # Build results
 [Dd]ebug/
