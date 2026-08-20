@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1870</width>
+    <height>1174</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::FocusPolicy::WheelFocus</enum>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ContextMenuPolicy::PreventContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Library Managment System</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #000000;
+}
+
+QFrame#headerPanel {
+    background-color: #1E293B;
+    border: none;
+}
+
+QLabel#logoLabel {
+    background-color: transparent;
+    color: white;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+QLabel#titleLabel {
+    background-color: transparent;
+    color: white;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+QLabel#subtitleLabel {
+    background-color: transparent;
+    color: #CBD5E1;
+    font-size: 10pt;
+}
+
+QFrame#menuPanel {
+    background-color: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+}
+
+QLabel#selectLabel {
+    background-color: transparent;
+    color: #1E293B;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+QPushButton {
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+QPushButton#studentButton {
+    background-color: #2563EB;
+    color: Dark;
+}
+
+QPushButton#studentButton:hover {
+    background-color: #1D4ED8;
+}
+
+QPushButton#studentButton:pressed {
+    background-color: #1E40AF;
+}
+
+QPushButton#facultyButton {
+    background-color: #10B981;
+    color: white;
+}
+
+QPushButton#facultyButton:hover {
+    background-color: #059669;
+}
+
+QPushButton#facultyButton:pressed {
+    background-color: #047857;
+}
+
+QPushButton#adminButton {
+    background-color: #7C3AED;
+    color: white;
+}
+
+QPushButton#adminButton:hover {
+    background-color: #6D28D9;
+}
+
+QPushButton#adminButton:pressed {
+    background-color: #5B21B6;
+}
+
+QPushButton#volunteerButton {
+    background-color: #F59E0B;
+    color: white;
+}
+
+QPushButton#volunteerButton:hover {
+    background-color: #D97706;
+}
+
+QPushButton#volunteerButton:pressed {
+    background-color: #B45309;
+}
+
+QPushButton#settingsButton {
+    background-color: #475569;
+    color: white;
+}
+
+QPushButton#settingsButton:hover {
+    background-color: #334155;
+}
+
+QPushButton#settingsButton:pressed {
+    background-color: #1E293B;
+}
+
+QPushButton#exitButton {
+    background-color: #DC2626;
+    color: white;
+}
+
+QPushButton#exitButton:hover {
+    background-color: #B91C1C;
+}
+
+QPushButton#exitButton:pressed {
+    background-color: #991B1B;
+}
+
+QLabel#statusLabel {
+    background-color: transparent;
+    color: #64748B;
+    font-size: 10pt;
+}
+
+QLabel#footerLabel {
+    background-color: transparent;
+    color: #64748B;
+    font-size: 9pt;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralWidget {
+    background-color: #000000;
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="contentArea" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QFrame" name="headerPanel">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>120</height>
+          </size>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::FocusPolicy::NoFocus</enum>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <widget class="QWidget" name="titleArea" native="true">
+          <property name="geometry">
+           <rect>
+            <x>123</x>
+            <y>12</y>
+            <width>469</width>
+            <height>95</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="titleLabel">
+             <property name="text">
+              <string>Library Management System</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="subtitleLabel">
+             <property name="text">
+              <string>Welcome to your digital library</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="logoLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>111</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="text">
+           <string>LMS</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QFrame" name="menuPanel">
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="2" column="0">
+           <widget class="QLabel" name="statusLabel">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> LMS</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="selectLabel">
+            <property name="text">
+             <string>Welcome to LMS</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>25</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="adminButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Admin Login</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="studentButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>STUDENT LOGIN</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="facultyButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Faculty Login</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="volunteerButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>New Login</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="10" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="settingsButton">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>55</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Setings</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="exitButton">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>55</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Exit</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="4" column="0">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="footerLabel">
+         <property name="text">
+          <string>Library Management System</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1870</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

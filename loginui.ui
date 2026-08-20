@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginUI</class>
+ <widget class="QMainWindow" name="LoginUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1894</width>
+    <height>1027</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* =========================================================
+   MAIN LOGIN WINDOW
+   ========================================================= */
+
+QMainWindow {
+    background-color: #000000;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+#headerPanel {
+    background-color: #1E293B;
+}
+
+#logoLabel {
+    color: white;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 32pt;
+    font-weight: bold;
+}
+
+#titleLabel {
+    color: white;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+#subtitleLabel {
+    color: #CBD5E1;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 10pt;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+#loginPanel {
+    background-color: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+}
+
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
+
+#welcomeLabel {
+    color: #1E293B;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+#welcomeSubtitleLabel {
+    color: #64748B;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 10pt;
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+#usernameLabel,
+#passwordLabel {
+    color: #334155;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   TEXT BOXES
+   ========================================================= */
+
+#usernameTextBox,
+#passwordTextBox {
+    background-color: #F8FAFC;
+    color: #1E293B;
+
+    border: 2px solid #CBD5E1;
+    border-radius: 8px;
+
+    padding: 8px;
+
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+}
+
+#usernameTextBox:focus,
+#passwordTextBox:focus {
+    border: 2px solid #2563EB;
+    background-color: white;
+}
+
+
+/* =========================================================
+   SHOW PASSWORD
+   ========================================================= */
+
+#showPasswordCheckBox {
+    color: #475569;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 10pt;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+#loginButton {
+    background-color: #2563EB;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    font-weight: bold;
+
+    padding: 10px;
+}
+
+#loginButton:hover {
+    background-color: #1D4ED8;
+}
+
+#loginButton:pressed {
+    background-color: #1E40AF;
+}
+
+
+/* =========================================================
+   CLEAR BUTTON
+   ========================================================= */
+
+#clearButton {
+    background-color: #E2E8F0;
+    color: #334155;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    font-weight: bold;
+
+    padding: 10px;
+}
+
+#clearButton:hover {
+    background-color: #CBD5E1;
+}
+
+#clearButton:pressed {
+    background-color: #94A3B8;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+#backButton {
+    background-color: transparent;
+    color: #2563EB;
+
+    border: none;
+
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+#backButton:hover {
+    color: #1D4ED8;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+#statusLabel {
+    color: #DC2626;
+
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 9.5pt;
+
+    padding: 5px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+#footerLabel {
+    color: #94A3B8;
+
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 9pt;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QFrame" name="headerPanel">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::FocusPolicy::NoFocus</enum>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QWidget" name="titleArea" native="true">
+       <property name="geometry">
+        <rect>
+         <x>123</x>
+         <y>12</y>
+         <width>469</width>
+         <height>95</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="titleLabel">
+          <property name="text">
+           <string>Library Management System</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="subtitleLabel">
+          <property name="text">
+           <string>Welcome to your digital library</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="logoLabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>111</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="text">
+        <string>LMS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Policy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>60</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QFrame" name="loginPanel">
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item alignment="Qt::AlignmentFlag::AlignLeft">
+        <widget class="QPushButton" name="backButton">
+         <property name="text">
+          <string>&lt;--</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="welcomeLabbel">
+         <property name="font">
+          <font>
+           <pointsize>36</pointsize>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Welcome Back!</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="welcomeSubtitleLabel">
+         <property name="text">
+          <string>Sign in to continue to your LMS account.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="usernameLabel">
+         <property name="text">
+          <string>Username:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="usernameTextBox">
+         <property name="placeholderText">
+          <string>Enter your username</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="passwordLabel">
+         <property name="text">
+          <string>Password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="passwordTextBox">
+         <property name="echoMode">
+          <enum>QLineEdit::EchoMode::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Enter your password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="showPasswordCheckBox">
+         <property name="text">
+          <string>Show Password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="statusLabel">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+        <widget class="QPushButton" name="loginButton">
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Library Management System  |  Secure Login</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1894</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
