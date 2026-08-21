@@ -13,13 +13,17 @@ class Dashboard : public QMainWindow
 
 public:
     explicit Dashboard(QWidget *parent = nullptr);
+
     ~Dashboard();
 
 private slots:
     void on_logoutButton_clicked();
 
+    void on_booksButton_clicked();
+
 private:
     Ui::Dashboard *ui;
+    void loadCSV(const QString &fileName);
 };
 
 #endif // DASHBOARD_H

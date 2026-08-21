@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1920</width>
-    <height>1080</height>
+    <width>1918</width>
+    <height>1077</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -38,7 +38,7 @@ QMainWindow {
    CENTRAL WIDGET
    ========================================================= */
 
-#centralWidget {
+#centralwidget {
     background-color: #F5F7FA;
 }
 
@@ -55,9 +55,10 @@ QMainWindow {
 
 /* =========================================================
    LMS LOGO
+   Actual objectName: label
    ========================================================= */
 
-#logoLabel {
+#label {
     color: #FFFFFF;
 
     font-family: &quot;Segoe UI&quot;;
@@ -98,10 +99,11 @@ QMainWindow {
 
 
 /* =========================================================
-   USER INFORMATION PANEL
+   USER INFORMATION AREA
+   Actual objectName: widget
    ========================================================= */
 
-#userInfoPanel {
+#widget {
     background-color: transparent;
     border: none;
 }
@@ -139,9 +141,10 @@ QMainWindow {
 
 /* =========================================================
    CONTENT AREA
+   Actual objectName: contentLayout
    ========================================================= */
 
-#contentPanel {
+#contentLayout {
     background-color: #F5F7FA;
     border: none;
 }
@@ -153,13 +156,12 @@ QMainWindow {
 
 #sidePanel {
     background-color: #0F172A;
-
     border: none;
 }
 
 
 /* =========================================================
-   ALL SIDEBAR BUTTONS - BASE
+   ALL SIDEBAR BUTTONS
    ========================================================= */
 
 #sidePanel QPushButton {
@@ -167,7 +169,7 @@ QMainWindow {
 
     color: #CBD5E1;
 
-    border: none;
+    border: 1px solid #334155;
     border-radius: 7px;
 
     font-family: &quot;Segoe UI&quot;;
@@ -184,22 +186,28 @@ QMainWindow {
 
 
 /* =========================================================
-   SIDEBAR BUTTON - HOVER
+   BUTTON HOVER
    ========================================================= */
 
 #sidePanel QPushButton:hover {
     background-color: #1E293B;
+
     color: #FFFFFF;
+
+    border: 1px solid #475569;
 }
 
 
 /* =========================================================
-   SIDEBAR BUTTON - PRESSED
+   BUTTON PRESSED
    ========================================================= */
 
 #sidePanel QPushButton:pressed {
     background-color: #334155;
+
     color: #FFFFFF;
+
+    border: 1px solid #64748B;
 }
 
 
@@ -208,22 +216,36 @@ QMainWindow {
    ========================================================= */
 
 #dashboardButton {
-    background-color: #2563EB !important;
-    color: #FFFFFF !important;
+    background-color: #2563EB;
 
+    color: #FFFFFF;
+
+    border: 1px solid #60A5FA;
     border-radius: 7px;
 
     font-weight: bold;
 }
 
 
+/* DASHBOARD HOVER */
+
 #dashboardButton:hover {
-    background-color: #1D4ED8 !important;
+    background-color: #1D4ED8;
+
+    color: #FFFFFF;
+
+    border: 1px solid #93C5FD;
 }
 
 
+/* DASHBOARD PRESSED */
+
 #dashboardButton:pressed {
-    background-color: #1E40AF !important;
+    background-color: #1E40AF;
+
+    color: #FFFFFF;
+
+    border: 1px solid #BFDBFE;
 }
 
 
@@ -231,11 +253,29 @@ QMainWindow {
    STUDENT BUTTONS
    ========================================================= */
 
+#myBooksButton {
+    border: 1px solid #334155;
+}
+
+#borrowedBooksButton {
+    border: 1px solid #334155;
+}
+
+#historyButton {
+    border: 1px solid #334155;
+}
+
+
+/* STUDENT HOVER */
+
 #myBooksButton:hover,
 #borrowedBooksButton:hover,
 #historyButton:hover {
     background-color: #1E3A8A;
+
     color: #FFFFFF;
+
+    border: 1px solid #3B82F6;
 }
 
 
@@ -243,18 +283,43 @@ QMainWindow {
    FACULTY BUTTONS
    ========================================================= */
 
+#manageBooksButton,
+#issueBookButton,
+#returnBookButton,
+#membersButton {
+    border: 1px solid #334155;
+}
+
+
+/* FACULTY HOVER */
+
 #manageBooksButton:hover,
 #issueBookButton:hover,
 #returnBookButton:hover,
 #membersButton:hover {
     background-color: #065F46;
+
     color: #FFFFFF;
+
+    border: 1px solid #10B981;
 }
 
 
 /* =========================================================
    ADMIN BUTTONS
    ========================================================= */
+
+#usersButton,
+#booksButton,
+#facultyButton,
+#volunteersButton,
+#reportsButton,
+#settingsButton {
+    border: 1px solid #334155;
+}
+
+
+/* ADMIN HOVER */
 
 #usersButton:hover,
 #booksButton:hover,
@@ -263,7 +328,10 @@ QMainWindow {
 #reportsButton:hover,
 #settingsButton:hover {
     background-color: #5B21B6;
+
     color: #FFFFFF;
+
+    border: 1px solid #8B5CF6;
 }
 
 
@@ -273,12 +341,26 @@ QMainWindow {
 
 #profileButton {
     color: #CBD5E1;
+
+    border: 1px solid #334155;
 }
 
 
 #profileButton:hover {
     background-color: #475569;
+
     color: #FFFFFF;
+
+    border: 1px solid #64748B;
+}
+
+
+#profileButton:pressed {
+    background-color: #334155;
+
+    color: #FFFFFF;
+
+    border: 1px solid #94A3B8;
 }
 
 
@@ -288,18 +370,26 @@ QMainWindow {
 
 #logoutButton {
     color: #FCA5A5;
+
+    border: 1px solid #7F1D1D;
 }
 
 
 #logoutButton:hover {
     background-color: #7F1D1D;
+
     color: #FFFFFF;
+
+    border: 1px solid #EF4444;
 }
 
 
 #logoutButton:pressed {
     background-color: #991B1B;
+
     color: #FFFFFF;
+
+    border: 1px solid #F87171;
 }
 
 
@@ -309,37 +399,21 @@ QMainWindow {
 
 #tablePanel {
     background-color: #F5F7FA;
-
     border: none;
 }
 
 
 /* =========================================================
-   TABLE TITLE
+   TABLE
+   Actual objectName: tableWidget
    ========================================================= */
 
-#tableTitleLabel {
-    color: #1E293B;
-
-    font-family: &quot;Segoe UI&quot;;
-    font-size: 17pt;
-    font-weight: bold;
-
-    background-color: transparent;
-}
-
-
-/* =========================================================
-   DATA TABLE
-   ========================================================= */
-
-#dataTable {
+#tableWidget {
     background-color: #FFFFFF;
 
     color: #1E293B;
 
-    border: 1px solid #E2E8F0;
-
+    border: 1px solid #CBD5E1;
     border-radius: 8px;
 
     gridline-color: #E2E8F0;
@@ -356,7 +430,7 @@ QMainWindow {
    TABLE HEADER
    ========================================================= */
 
-#dataTable QHeaderView::section {
+#tableWidget QHeaderView::section {
     background-color: #1E293B;
 
     color: #FFFFFF;
@@ -372,10 +446,10 @@ QMainWindow {
 
 
 /* =========================================================
-   TABLE HEADER - HOVER
+   TABLE HEADER HOVER
    ========================================================= */
 
-#dataTable QHeaderView::section:hover {
+#tableWidget QHeaderView::section:hover {
     background-color: #334155;
 }
 
@@ -384,17 +458,18 @@ QMainWindow {
    TABLE CORNER
    ========================================================= */
 
-#dataTable QTableCornerButton::section {
+#tableWidget QTableCornerButton::section {
     background-color: #1E293B;
+
     border: none;
 }
 
 
 /* =========================================================
-   TABLE SCROLLBAR
+   TABLE VERTICAL SCROLLBAR
    ========================================================= */
 
-#dataTable QScrollBar:vertical {
+#tableWidget QScrollBar:vertical {
     background-color: #F1F5F9;
 
     width: 10px;
@@ -403,7 +478,7 @@ QMainWindow {
 }
 
 
-#dataTable QScrollBar::handle:vertical {
+#tableWidget QScrollBar::handle:vertical {
     background-color: #CBD5E1;
 
     border-radius: 5px;
@@ -412,25 +487,29 @@ QMainWindow {
 }
 
 
-#dataTable QScrollBar::handle:vertical:hover {
+#tableWidget QScrollBar::handle:vertical:hover {
     background-color: #94A3B8;
 }
 
 
-#dataTable QScrollBar::add-line:vertical,
-#dataTable QScrollBar::sub-line:vertical {
+#tableWidget QScrollBar::add-line:vertical,
+#tableWidget QScrollBar::sub-line:vertical {
     height: 0px;
 }
 
 
-#dataTable QScrollBar:horizontal {
+/* =========================================================
+   TABLE HORIZONTAL SCROLLBAR
+   ========================================================= */
+
+#tableWidget QScrollBar:horizontal {
     background-color: #F1F5F9;
 
     height: 10px;
 }
 
 
-#dataTable QScrollBar::handle:horizontal {
+#tableWidget QScrollBar::handle:horizontal {
     background-color: #CBD5E1;
 
     border-radius: 5px;
@@ -439,13 +518,13 @@ QMainWindow {
 }
 
 
-#dataTable QScrollBar::handle:horizontal:hover {
+#tableWidget QScrollBar::handle:horizontal:hover {
     background-color: #94A3B8;
 }
 
 
-#dataTable QScrollBar::add-line:horizontal,
-#dataTable QScrollBar::sub-line:horizontal {
+#tableWidget QScrollBar::add-line:horizontal,
+#tableWidget QScrollBar::sub-line:horizontal {
     width: 0px;
 }
 
@@ -505,10 +584,10 @@ QMainWindow {
        <widget class="QLabel" name="label">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>40</y>
-          <width>63</width>
-          <height>20</height>
+          <x>20</x>
+          <y>20</y>
+          <width>101</width>
+          <height>61</height>
          </rect>
         </property>
         <property name="text">
@@ -564,214 +643,192 @@ QMainWindow {
      <rect>
       <x>0</x>
       <y>100</y>
-      <width>1931</width>
-      <height>971</height>
+      <width>1921</width>
+      <height>941</height>
      </rect>
     </property>
-    <widget class="QFrame" name="sidePanel">
-     <property name="geometry">
-      <rect>
-       <x>-10</x>
-       <y>-2</y>
-       <width>381</width>
-       <height>931</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="dashboardButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Dashboard</string>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,5">
+     <item>
+      <widget class="QWidget" name="sidePanel" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="dashboardButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Dashboard</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="booksButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>    Books</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="memberButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Members</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="borrowedButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Borrowed</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="issueBookButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Issue Book</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="userButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>User</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="historyButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>History</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="volunteersButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Volunteers</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="myBooksButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>My Books</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="returnBookButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Return Book</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="manageBooksButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Manage Books</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="facultyButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Faculty</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="profileButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Profile</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="settingsButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Settings</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="reportstButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Reports</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="logoutButton">
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Exit</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="tablePanel" native="true">
+       <widget class="QTableWidget" name="dataTable">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>11</y>
+          <width>1551</width>
+          <height>901</height>
+         </rect>
         </property>
        </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="booksButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Books</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="memberButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Members</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="borrowedButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Borrowed</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="issueBookButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Issue Book</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="userButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>User</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="historyButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>History</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="volunteersButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Volunteers</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="myBooksButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>My Books</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="returnBookButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Return Book</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="manageBooksButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Manage Books</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="facultyButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Faculty</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="profileButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Profile</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="settingsButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Settings</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="reportstButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Reports</string>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignmentFlag::AlignHCenter">
-       <widget class="QPushButton" name="logoutButton">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Exit</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QFrame" name="tablePanel">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>0</y>
-       <width>1541</width>
-       <height>951</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
-     </property>
-     <widget class="QTableWidget" name="tableWidget">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>100</y>
-        <width>1401</width>
-        <height>641</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QLabel" name="footerLabel">
     <property name="geometry">
@@ -785,6 +842,9 @@ QMainWindow {
     <property name="text">
      <string>Library Managment System- Dashboard</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -792,7 +852,7 @@ QMainWindow {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1920</width>
+     <width>1918</width>
      <height>25</height>
     </rect>
    </property>

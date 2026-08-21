@@ -64,7 +64,7 @@ OBJECTS       = debug/Dashboard.o \
 		debug/moc_loginui.o \
 		debug/moc_mainwindow.o
 
-DIST          =  ..\..\Dashboard.h \
+DIST          = Books.csv ..\..\Dashboard.h \
 		..\..\loginui.h \
 		..\..\mainwindow.h ..\..\Dashboard.cpp \
 		..\..\loginui.cpp \
@@ -328,6 +328,7 @@ debug/moc_Dashboard.cpp: ../../Dashboard.h \
 	C:\Qt\6.11.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/tehsa/Desktop/Cpp/LMS_GUI/build/Desktop_Qt_6_11_2_MinGW_64_bit_Debug/debug/moc_predefs.h -IC:/Qt/6.11.2/mingw_64/mkspecs/win32-g++ -IC:/Users/tehsa/Desktop/Cpp/LMS_GUI -IC:/Qt/6.11.2/mingw_64/include -IC:/Qt/6.11.2/mingw_64/include/QtWidgets -IC:/Qt/6.11.2/mingw_64/include/QtGui -IC:/Qt/6.11.2/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\Dashboard.h -o debug\moc_Dashboard.cpp
 
 debug/moc_loginui.cpp: ../../loginui.h \
+		../../Dashboard.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QMainWindow \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -536,6 +537,7 @@ debug/moc_loginui.cpp: ../../loginui.h \
 
 debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		../../loginui.h \
+		../../Dashboard.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QMainWindow \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -976,10 +978,62 @@ debug/Dashboard.o: ../../Dashboard.cpp ../../Dashboard.h \
 		C:/Qt/6.11.2/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.11.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_Dashboard.h
+		ui_Dashboard.h \
+		C:/Qt/6.11.2/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QFormLayout \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QLayout \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QHeaderView \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qheaderview.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.11.2/mingw_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/6.11.2/mingw_64/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/6.11.2/mingw_64/include/QtGui/qvalidator.h \
+		C:/Qt/6.11.2/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qslider.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qstyle.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qrubberband.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.11.2/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.11.2/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QMenuBar \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qmenubar.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qmenu.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QStatusBar \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qstatusbar.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QTableWidget \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qtablewidget.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qtableview.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QVBoxLayout \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QWidget \
+		C:/Qt/6.11.2/mingw_64/include/QtCore/QFile \
+		C:/Qt/6.11.2/mingw_64/include/QtCore/qfile.h \
+		C:/Qt/6.11.2/mingw_64/include/QtCore/qfiledevice.h \
+		C:/Qt/6.11.2/mingw_64/include/QtCore/QTextStream \
+		C:/Qt/6.11.2/mingw_64/include/QtCore/QStringList \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QTableWidgetItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Dashboard.o ..\..\Dashboard.cpp
 
 debug/loginui.o: ../../loginui.cpp ../../loginui.h \
+		../../Dashboard.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QMainWindow \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -1206,19 +1260,19 @@ debug/loginui.o: ../../loginui.cpp ../../loginui.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qmenu.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QPushButton \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QSpacerItem \
-		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qlayoutitem.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QStatusBar \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qstatusbar.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QVBoxLayout \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qboxlayout.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qlayoutitem.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qgridlayout.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\loginui.o ..\..\loginui.cpp
 
 debug/main.o: ../../main.cpp ../../mainwindow.h \
 		../../loginui.h \
+		../../Dashboard.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QMainWindow \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -1427,6 +1481,7 @@ debug/main.o: ../../main.cpp ../../mainwindow.h \
 
 debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../loginui.h \
+		../../Dashboard.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/QMainWindow \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/6.11.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \

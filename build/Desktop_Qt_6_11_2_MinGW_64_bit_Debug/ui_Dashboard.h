@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
-#include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -45,7 +44,8 @@ public:
     QLabel *authorityLabel;
     QLabel *username;
     QWidget *contentLayout;
-    QFrame *sidePanel;
+    QHBoxLayout *horizontalLayout_2;
+    QWidget *sidePanel;
     QVBoxLayout *verticalLayout_2;
     QPushButton *dashboardButton;
     QPushButton *booksButton;
@@ -63,8 +63,8 @@ public:
     QPushButton *settingsButton;
     QPushButton *reportstButton;
     QPushButton *logoutButton;
-    QFrame *tablePanel;
-    QTableWidget *tableWidget;
+    QWidget *tablePanel;
+    QTableWidget *dataTable;
     QLabel *footerLabel;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -73,7 +73,7 @@ public:
     {
         if (Dashboard->objectName().isEmpty())
             Dashboard->setObjectName("Dashboard");
-        Dashboard->resize(1920, 1080);
+        Dashboard->resize(1918, 1077);
         Dashboard->setMaximumSize(QSize(1920, 1080));
         Dashboard->setStyleSheet(QString::fromUtf8("/* =========================================================\n"
 "   LMS DASHBOARD\n"
@@ -93,7 +93,7 @@ public:
 "   CENTRAL WIDGET\n"
 "   ========================================================= */\n"
 "\n"
-"#centralWidget {\n"
+"#centralwidget {\n"
 "    background-color: #F5F7FA;\n"
 "}\n"
 "\n"
@@ -110,10 +110,11 @@ public:
 "\n"
 "/* =========================================================\n"
 "   LMS LOGO\n"
-"   ========================================================= */\n"
+"   Actual objectName: label\n"
+"   ==========================================="
+                        "============== */\n"
 "\n"
-"#logo"
-                        "Label {\n"
+"#label {\n"
 "    color: #FFFFFF;\n"
 "\n"
 "    font-family: \"Segoe UI\";\n"
@@ -154,11 +155,12 @@ public:
 "\n"
 "\n"
 "/* =========================================================\n"
-"   USER INFORMATION PANEL\n"
-"   ======================================================="
-                        "== */\n"
+"   USER INFORMATION AREA\n"
+"   Actual objectName: widget\n"
+""
+                        "   ========================================================= */\n"
 "\n"
-"#userInfoPanel {\n"
+"#widget {\n"
 "    background-color: transparent;\n"
 "    border: none;\n"
 "}\n"
@@ -196,12 +198,13 @@ public:
 "\n"
 "/* =========================================================\n"
 "   CONTENT AREA\n"
-"   ========================================================= */\n"
+"   Actual objectName: contentLayout\n"
+"   =============================="
+                        "=========================== */\n"
 "\n"
-"#contentPanel {\n"
+"#contentLayout {\n"
 "    background-color: #F5F7FA;\n"
-""
-                        "    border: none;\n"
+"    border: none;\n"
 "}\n"
 "\n"
 "\n"
@@ -211,13 +214,12 @@ public:
 "\n"
 "#sidePanel {\n"
 "    background-color: #0F172A;\n"
-"\n"
 "    border: none;\n"
 "}\n"
 "\n"
 "\n"
 "/* =========================================================\n"
-"   ALL SIDEBAR BUTTONS - BASE\n"
+"   ALL SIDEBAR BUTTONS\n"
 "   ========================================================= */\n"
 "\n"
 "#sidePanel QPushButton {\n"
@@ -225,7 +227,7 @@ public:
 "\n"
 "    color: #CBD5E1;\n"
 "\n"
-"    border: none;\n"
+"    border: 1px solid #334155;\n"
 "    border-radius: 7px;\n"
 "\n"
 "    font-family: \"Segoe UI\";\n"
@@ -242,23 +244,29 @@ public:
 "\n"
 "\n"
 "/* =========================================================\n"
-"   SIDEBAR BUTTON - HOVER\n"
-"   ========================================================= */\n"
+"   BUTTON HOVER\n"
+""
+                        "   ========================================================= */\n"
 "\n"
-"#sidePanel"
-                        " QPushButton:hover {\n"
+"#sidePanel QPushButton:hover {\n"
 "    background-color: #1E293B;\n"
+"\n"
 "    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #475569;\n"
 "}\n"
 "\n"
 "\n"
 "/* =========================================================\n"
-"   SIDEBAR BUTTON - PRESSED\n"
+"   BUTTON PRESSED\n"
 "   ========================================================= */\n"
 "\n"
 "#sidePanel QPushButton:pressed {\n"
 "    background-color: #334155;\n"
+"\n"
 "    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #64748B;\n"
 "}\n"
 "\n"
 "\n"
@@ -267,35 +275,67 @@ public:
 "   ========================================================= */\n"
 "\n"
 "#dashboardButton {\n"
-"    background-color: #2563EB !important;\n"
-"    color: #FFFFFF !important;\n"
+"    background-color: #2563EB;\n"
 "\n"
+"    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #60A5FA;\n"
 "    border-radius: 7px;\n"
 "\n"
 "    font-weight: bold;\n"
 "}\n"
 "\n"
 "\n"
+"/* DASHBOARD HOVER */\n"
+"\n"
 "#dashboardButton:hover {\n"
-"    background-color: #1D4ED8 !important;\n"
+"    background-color: #1D4ED8;\n"
+"\n"
+"    color: #FFF"
+                        "FFF;\n"
+"\n"
+"    border: 1px solid #93C5FD;\n"
 "}\n"
 "\n"
 "\n"
+"/* DASHBOARD PRESSED */\n"
+"\n"
 "#dashboardButton:pressed {\n"
-"    background-color: #1E40AF !important;\n"
+"    background-color: #1E40AF;\n"
+"\n"
+"    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #BFDBFE;\n"
 "}\n"
 "\n"
 "\n"
 "/* =========================================================\n"
 "   STUDENT BUTTONS\n"
-"   ====================="
-                        "==================================== */\n"
+"   ========================================================= */\n"
+"\n"
+"#myBooksButton {\n"
+"    border: 1px solid #334155;\n"
+"}\n"
+"\n"
+"#borrowedBooksButton {\n"
+"    border: 1px solid #334155;\n"
+"}\n"
+"\n"
+"#historyButton {\n"
+"    border: 1px solid #334155;\n"
+"}\n"
+"\n"
+"\n"
+"/* STUDENT HOVER */\n"
 "\n"
 "#myBooksButton:hover,\n"
 "#borrowedBooksButton:hover,\n"
 "#historyButton:hover {\n"
 "    background-color: #1E3A8A;\n"
+"\n"
 "    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #3B82F6;\n"
 "}\n"
 "\n"
 "\n"
@@ -303,18 +343,44 @@ public:
 "   FACULTY BUTTONS\n"
 "   ========================================================= */\n"
 "\n"
+"#manageB"
+                        "ooksButton,\n"
+"#issueBookButton,\n"
+"#returnBookButton,\n"
+"#membersButton {\n"
+"    border: 1px solid #334155;\n"
+"}\n"
+"\n"
+"\n"
+"/* FACULTY HOVER */\n"
+"\n"
 "#manageBooksButton:hover,\n"
 "#issueBookButton:hover,\n"
 "#returnBookButton:hover,\n"
 "#membersButton:hover {\n"
 "    background-color: #065F46;\n"
+"\n"
 "    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #10B981;\n"
 "}\n"
 "\n"
 "\n"
 "/* =========================================================\n"
 "   ADMIN BUTTONS\n"
 "   ========================================================= */\n"
+"\n"
+"#usersButton,\n"
+"#booksButton,\n"
+"#facultyButton,\n"
+"#volunteersButton,\n"
+"#reportsButton,\n"
+"#settingsButton {\n"
+"    border: 1px solid #334155;\n"
+"}\n"
+"\n"
+"\n"
+"/* ADMIN HOVER */\n"
 "\n"
 "#usersButton:hover,\n"
 "#booksButton:hover,\n"
@@ -323,23 +389,40 @@ public:
 "#reportsButton:hover,\n"
 "#settingsButton:hover {\n"
 "    background-color: #5B21B6;\n"
+"\n"
 "    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #8B5CF6;\n"
 "}\n"
 "\n"
-"\n"
+""
+                        "\n"
 "/* =========================================================\n"
-"   PROFILE"
-                        " BUTTON\n"
+"   PROFILE BUTTON\n"
 "   ========================================================= */\n"
 "\n"
 "#profileButton {\n"
 "    color: #CBD5E1;\n"
+"\n"
+"    border: 1px solid #334155;\n"
 "}\n"
 "\n"
 "\n"
 "#profileButton:hover {\n"
 "    background-color: #475569;\n"
+"\n"
 "    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #64748B;\n"
+"}\n"
+"\n"
+"\n"
+"#profileButton:pressed {\n"
+"    background-color: #334155;\n"
+"\n"
+"    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #94A3B8;\n"
 "}\n"
 "\n"
 "\n"
@@ -349,18 +432,27 @@ public:
 "\n"
 "#logoutButton {\n"
 "    color: #FCA5A5;\n"
+"\n"
+"    border: 1px solid #7F1D1D;\n"
 "}\n"
 "\n"
 "\n"
 "#logoutButton:hover {\n"
 "    background-color: #7F1D1D;\n"
+"\n"
 "    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #EF4444;\n"
 "}\n"
 "\n"
 "\n"
 "#logoutButton:pressed {\n"
-"    background-color: #991B1B;\n"
+"    background-color: #991B1B;"
+                        "\n"
+"\n"
 "    color: #FFFFFF;\n"
+"\n"
+"    border: 1px solid #F87171;\n"
 "}\n"
 "\n"
 "\n"
@@ -370,38 +462,21 @@ public:
 "\n"
 "#tablePanel {\n"
 "    background-color: #F5F7FA;\n"
-"\n"
 "    border: none;\n"
 "}\n"
 "\n"
 "\n"
 "/* =========================================================\n"
-"   TABLE TITLE\n"
-"   =============="
-                        "=========================================== */\n"
-"\n"
-"#tableTitleLabel {\n"
-"    color: #1E293B;\n"
-"\n"
-"    font-family: \"Segoe UI\";\n"
-"    font-size: 17pt;\n"
-"    font-weight: bold;\n"
-"\n"
-"    background-color: transparent;\n"
-"}\n"
-"\n"
-"\n"
-"/* =========================================================\n"
-"   DATA TABLE\n"
+"   TABLE\n"
+"   Actual objectName: tableWidget\n"
 "   ========================================================= */\n"
 "\n"
-"#dataTable {\n"
+"#tableWidget {\n"
 "    background-color: #FFFFFF;\n"
 "\n"
 "    color: #1E293B;\n"
 "\n"
-"    border: 1px solid #E2E8F0;\n"
-"\n"
+"    border: 1px solid #CBD5E1;\n"
 "    border-radius: 8px;\n"
 "\n"
 "    gridline-color: #E2E8F0;\n"
@@ -416,14 +491,14 @@ public:
 "\n"
 "/* =========================================================\n"
 "   TABLE HEADER\n"
-"   ========================================================= */\n"
+"   ========================================================"
+                        "= */\n"
 "\n"
-"#dataTable QHeaderView::section {\n"
+"#tableWidget QHeaderView::section {\n"
 "    background-color: #1E293B;\n"
 "\n"
 "    color: #FFFFFF;\n"
-""
-                        "\n"
+"\n"
 "    border: none;\n"
 "\n"
 "    padding: 10px;\n"
@@ -435,10 +510,10 @@ public:
 "\n"
 "\n"
 "/* =========================================================\n"
-"   TABLE HEADER - HOVER\n"
+"   TABLE HEADER HOVER\n"
 "   ========================================================= */\n"
 "\n"
-"#dataTable QHeaderView::section:hover {\n"
+"#tableWidget QHeaderView::section:hover {\n"
 "    background-color: #334155;\n"
 "}\n"
 "\n"
@@ -447,17 +522,19 @@ public:
 "   TABLE CORNER\n"
 "   ========================================================= */\n"
 "\n"
-"#dataTable QTableCornerButton::section {\n"
+"#tableWidget QTableCornerButton::section {\n"
 "    background-color: #1E293B;\n"
+"\n"
 "    border: none;\n"
 "}\n"
 "\n"
 "\n"
 "/* =========================================================\n"
-"   TABLE SCROLLBAR\n"
+"   TABLE VERTICAL SCROLLBAR\n"
 "   ========================================================= */\n"
 "\n"
-"#dataTable QScrollBar:vertical {\n"
+"#tableWidget QScrollBar:vertic"
+                        "al {\n"
 "    background-color: #F1F5F9;\n"
 "\n"
 "    width: 10px;\n"
@@ -466,8 +543,7 @@ public:
 "}\n"
 "\n"
 "\n"
-"#dataTable QScrollBar::h"
-                        "andle:vertical {\n"
+"#tableWidget QScrollBar::handle:vertical {\n"
 "    background-color: #CBD5E1;\n"
 "\n"
 "    border-radius: 5px;\n"
@@ -476,25 +552,29 @@ public:
 "}\n"
 "\n"
 "\n"
-"#dataTable QScrollBar::handle:vertical:hover {\n"
+"#tableWidget QScrollBar::handle:vertical:hover {\n"
 "    background-color: #94A3B8;\n"
 "}\n"
 "\n"
 "\n"
-"#dataTable QScrollBar::add-line:vertical,\n"
-"#dataTable QScrollBar::sub-line:vertical {\n"
+"#tableWidget QScrollBar::add-line:vertical,\n"
+"#tableWidget QScrollBar::sub-line:vertical {\n"
 "    height: 0px;\n"
 "}\n"
 "\n"
 "\n"
-"#dataTable QScrollBar:horizontal {\n"
+"/* =========================================================\n"
+"   TABLE HORIZONTAL SCROLLBAR\n"
+"   ========================================================= */\n"
+"\n"
+"#tableWidget QScrollBar:horizontal {\n"
 "    background-color: #F1F5F9;\n"
 "\n"
 "    height: 10px;\n"
 "}\n"
 "\n"
 "\n"
-"#dataTable QScrollBar::handle:horizontal {\n"
+"#tableWidget QScrollBar::handle:horizontal {\n"
 "    background-color: #CBD5E1;\n"
 "\n"
 "    border-radius: 5px;\n"
@@ -503,21 +583,21 @@ public:
 "}\n"
 "\n"
 "\n"
-"#dataTable QScrollBar::handle:horizontal:hover {\n"
-"    background-color: #94A3B8;\n"
+"#tableWidget QScrollBar::handle:horizontal:hover {\n"
+"    "
+                        "background-color: #94A3B8;\n"
 "}\n"
 "\n"
 "\n"
-"#dataTable QScrollBar::add-line:horizontal,\n"
-"#dataTable QScrollBar::sub-line:horizontal {\n"
+"#tableWidget QScrollBar::add-line:horizontal,\n"
+"#tableWidget QScrollBar::sub-line:horizontal {\n"
 "    width: 0px;\n"
 "}\n"
 "\n"
 "\n"
 "/* =========================================================\n"
 "   FOOTER\n"
-"   ========================================================= */"
-                        "\n"
+"   ========================================================= */\n"
 "\n"
 "#footerLabel {\n"
 "    color: #64748B;\n"
@@ -554,7 +634,7 @@ public:
 
         label = new QLabel(headerPanel);
         label->setObjectName("label");
-        label->setGeometry(QRect(40, 40, 63, 20));
+        label->setGeometry(QRect(20, 20, 101, 61));
         widget = new QWidget(headerPanel);
         widget->setObjectName("widget");
         widget->setGeometry(QRect(1430, 0, 481, 101));
@@ -585,12 +665,11 @@ public:
 
         contentLayout = new QWidget(centralwidget);
         contentLayout->setObjectName("contentLayout");
-        contentLayout->setGeometry(QRect(0, 100, 1931, 971));
-        sidePanel = new QFrame(contentLayout);
+        contentLayout->setGeometry(QRect(0, 100, 1921, 941));
+        horizontalLayout_2 = new QHBoxLayout(contentLayout);
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        sidePanel = new QWidget(contentLayout);
         sidePanel->setObjectName("sidePanel");
-        sidePanel->setGeometry(QRect(-10, -2, 381, 931));
-        sidePanel->setFrameShape(QFrame::Shape::StyledPanel);
-        sidePanel->setFrameShadow(QFrame::Shadow::Raised);
         verticalLayout_2 = new QVBoxLayout(sidePanel);
         verticalLayout_2->setObjectName("verticalLayout_2");
         dashboardButton = new QPushButton(sidePanel);
@@ -689,21 +768,27 @@ public:
 
         verticalLayout_2->addWidget(logoutButton, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        tablePanel = new QFrame(contentLayout);
+
+        horizontalLayout_2->addWidget(sidePanel);
+
+        tablePanel = new QWidget(contentLayout);
         tablePanel->setObjectName("tablePanel");
-        tablePanel->setGeometry(QRect(380, 0, 1541, 951));
-        tablePanel->setFrameShape(QFrame::Shape::StyledPanel);
-        tablePanel->setFrameShadow(QFrame::Shadow::Raised);
-        tableWidget = new QTableWidget(tablePanel);
-        tableWidget->setObjectName("tableWidget");
-        tableWidget->setGeometry(QRect(50, 100, 1401, 641));
+        dataTable = new QTableWidget(tablePanel);
+        dataTable->setObjectName("dataTable");
+        dataTable->setGeometry(QRect(11, 11, 1551, 901));
+
+        horizontalLayout_2->addWidget(tablePanel);
+
+        horizontalLayout_2->setStretch(0, 1);
+        horizontalLayout_2->setStretch(1, 5);
         footerLabel = new QLabel(centralwidget);
         footerLabel->setObjectName("footerLabel");
         footerLabel->setGeometry(QRect(720, 1030, 621, 20));
+        footerLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         Dashboard->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Dashboard);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1920, 25));
+        menubar->setGeometry(QRect(0, 0, 1918, 25));
         Dashboard->setMenuBar(menubar);
         statusbar = new QStatusBar(Dashboard);
         statusbar->setObjectName("statusbar");
@@ -725,7 +810,7 @@ public:
         authorityLabel->setText(QCoreApplication::translate("Dashboard", "TextLabel", nullptr));
         username->setText(QCoreApplication::translate("Dashboard", "Username:", nullptr));
         dashboardButton->setText(QCoreApplication::translate("Dashboard", "Dashboard", nullptr));
-        booksButton->setText(QCoreApplication::translate("Dashboard", "Books", nullptr));
+        booksButton->setText(QCoreApplication::translate("Dashboard", "    Books", nullptr));
         memberButton->setText(QCoreApplication::translate("Dashboard", "Members", nullptr));
         borrowedButton->setText(QCoreApplication::translate("Dashboard", "Borrowed", nullptr));
         issueBookButton->setText(QCoreApplication::translate("Dashboard", "Issue Book", nullptr));
