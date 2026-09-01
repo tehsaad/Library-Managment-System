@@ -61,7 +61,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(1280, 720);
-        MainWindow->setMinimumSize(QSize(1200, 700));
+        MainWindow->setMinimumSize(QSize(1000, 500));
         MainWindow->setMaximumSize(QSize(1280, 720));
         MainWindow->setFocusPolicy(Qt::FocusPolicy::WheelFocus);
         MainWindow->setContextMenuPolicy(Qt::ContextMenuPolicy::PreventContextMenu);
@@ -357,7 +357,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1280, 25));
+        menubar->setGeometry(QRect(0, 0, 1280, 21));
         MainWindow->setMenuBar(menubar);
 
         retranslateUi(MainWindow);

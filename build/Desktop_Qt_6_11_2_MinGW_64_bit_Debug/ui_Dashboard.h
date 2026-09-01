@@ -57,11 +57,10 @@ public:
     QPushButton *volunteersButton;
     QPushButton *myBooksButton;
     QPushButton *returnBookButton;
-    QPushButton *manageBooksButton;
     QPushButton *facultyButton;
     QPushButton *profileButton;
     QPushButton *settingsButton;
-    QPushButton *reportstButton;
+    QPushButton *saveButton;
     QPushButton *logoutButton;
     QWidget *tablePanel;
     QTableWidget *dataTable;
@@ -732,12 +731,6 @@ public:
 
         verticalLayout_2->addWidget(returnBookButton, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        manageBooksButton = new QPushButton(sidePanel);
-        manageBooksButton->setObjectName("manageBooksButton");
-        manageBooksButton->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
-
-        verticalLayout_2->addWidget(manageBooksButton, 0, Qt::AlignmentFlag::AlignHCenter);
-
         facultyButton = new QPushButton(sidePanel);
         facultyButton->setObjectName("facultyButton");
         facultyButton->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
@@ -756,11 +749,11 @@ public:
 
         verticalLayout_2->addWidget(settingsButton, 0, Qt::AlignmentFlag::AlignHCenter);
 
-        reportstButton = new QPushButton(sidePanel);
-        reportstButton->setObjectName("reportstButton");
-        reportstButton->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        saveButton = new QPushButton(sidePanel);
+        saveButton->setObjectName("saveButton");
+        saveButton->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
 
-        verticalLayout_2->addWidget(reportstButton, 0, Qt::AlignmentFlag::AlignHCenter);
+        verticalLayout_2->addWidget(saveButton, 0, Qt::AlignmentFlag::AlignHCenter);
 
         logoutButton = new QPushButton(sidePanel);
         logoutButton->setObjectName("logoutButton");
@@ -788,7 +781,7 @@ public:
         Dashboard->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Dashboard);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1918, 25));
+        menubar->setGeometry(QRect(0, 0, 1918, 21));
         Dashboard->setMenuBar(menubar);
         statusbar = new QStatusBar(Dashboard);
         statusbar->setObjectName("statusbar");
@@ -814,16 +807,15 @@ public:
         memberButton->setText(QCoreApplication::translate("Dashboard", "Members", nullptr));
         borrowedButton->setText(QCoreApplication::translate("Dashboard", "Borrowed", nullptr));
         issueBookButton->setText(QCoreApplication::translate("Dashboard", "Issue Book", nullptr));
-        userButton->setText(QCoreApplication::translate("Dashboard", "User", nullptr));
+        userButton->setText(QCoreApplication::translate("Dashboard", "Users", nullptr));
         historyButton->setText(QCoreApplication::translate("Dashboard", "History", nullptr));
         volunteersButton->setText(QCoreApplication::translate("Dashboard", "Volunteers", nullptr));
         myBooksButton->setText(QCoreApplication::translate("Dashboard", "My Books", nullptr));
         returnBookButton->setText(QCoreApplication::translate("Dashboard", "Return Book", nullptr));
-        manageBooksButton->setText(QCoreApplication::translate("Dashboard", "Manage Books", nullptr));
         facultyButton->setText(QCoreApplication::translate("Dashboard", "Faculty", nullptr));
         profileButton->setText(QCoreApplication::translate("Dashboard", "Profile", nullptr));
         settingsButton->setText(QCoreApplication::translate("Dashboard", "Settings", nullptr));
-        reportstButton->setText(QCoreApplication::translate("Dashboard", "Reports", nullptr));
+        saveButton->setText(QCoreApplication::translate("Dashboard", "Save", nullptr));
         logoutButton->setText(QCoreApplication::translate("Dashboard", "Exit", nullptr));
         footerLabel->setText(QCoreApplication::translate("Dashboard", "Library Managment System- Dashboard", nullptr));
     } // retranslateUi

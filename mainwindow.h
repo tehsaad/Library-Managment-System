@@ -1,7 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include "loginui.h"
+
 #include <QMainWindow>
+
+class LoginUI;
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -15,16 +17,22 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow() override;
+    ~MainWindow();
 
 private slots:
+
     void on_studentButton_clicked();
+
+    void on_adminButton_clicked();
+
+    void on_facultyButton_clicked();
+
+    void on_volunteerButton_clicked();
 
 private:
     Ui::MainWindow *ui;
 
     LoginUI *logUI;
-
-
 };
+
 #endif // MAINWINDOW_H

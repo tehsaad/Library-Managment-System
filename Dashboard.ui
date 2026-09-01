@@ -707,7 +707,7 @@ QMainWindow {
            <enum>Qt::LayoutDirection::LeftToRight</enum>
           </property>
           <property name="text">
-           <string>User</string>
+           <string>Users</string>
           </property>
          </widget>
         </item>
@@ -752,16 +752,6 @@ QMainWindow {
          </widget>
         </item>
         <item alignment="Qt::AlignmentFlag::AlignHCenter">
-         <widget class="QPushButton" name="manageBooksButton">
-          <property name="layoutDirection">
-           <enum>Qt::LayoutDirection::LeftToRight</enum>
-          </property>
-          <property name="text">
-           <string>Manage Books</string>
-          </property>
-         </widget>
-        </item>
-        <item alignment="Qt::AlignmentFlag::AlignHCenter">
          <widget class="QPushButton" name="facultyButton">
           <property name="layoutDirection">
            <enum>Qt::LayoutDirection::LeftToRight</enum>
@@ -792,12 +782,12 @@ QMainWindow {
          </widget>
         </item>
         <item alignment="Qt::AlignmentFlag::AlignHCenter">
-         <widget class="QPushButton" name="reportstButton">
+         <widget class="QPushButton" name="saveButton">
           <property name="layoutDirection">
            <enum>Qt::LayoutDirection::LeftToRight</enum>
           </property>
           <property name="text">
-           <string>Reports</string>
+           <string>Save</string>
           </property>
          </widget>
         </item>
@@ -853,7 +843,7 @@ QMainWindow {
      <x>0</x>
      <y>0</y>
      <width>1918</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

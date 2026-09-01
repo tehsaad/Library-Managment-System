@@ -28,6 +28,7 @@ class Ui_LoginUI
 {
 public:
     QWidget *centralwidget;
+    QVBoxLayout *verticalLayout_3;
     QFrame *headerPanel;
     QWidget *titleArea;
     QVBoxLayout *verticalLayout_2;
@@ -54,8 +55,9 @@ public:
     {
         if (LoginUI->objectName().isEmpty())
             LoginUI->setObjectName("LoginUI");
-        LoginUI->resize(1278, 720);
-        LoginUI->setMaximumSize(QSize(1280, 720));
+        LoginUI->resize(550, 575);
+        LoginUI->setMinimumSize(QSize(550, 575));
+        LoginUI->setMaximumSize(QSize(550, 575));
         LoginUI->setStyleSheet(QString::fromUtf8("/* =========================================================\n"
 "   MAIN LOGIN WINDOW\n"
 "   ========================================================= */\n"
@@ -276,9 +278,10 @@ public:
 "}"));
         centralwidget = new QWidget(LoginUI);
         centralwidget->setObjectName("centralwidget");
+        verticalLayout_3 = new QVBoxLayout(centralwidget);
+        verticalLayout_3->setObjectName("verticalLayout_3");
         headerPanel = new QFrame(centralwidget);
         headerPanel->setObjectName("headerPanel");
-        headerPanel->setGeometry(QRect(11, 11, 1256, 60));
         headerPanel->setMinimumSize(QSize(0, 60));
         headerPanel->setFocusPolicy(Qt::FocusPolicy::NoFocus);
         headerPanel->setFrameShape(QFrame::Shape::StyledPanel);
@@ -303,9 +306,11 @@ public:
         logoLabel->setGeometry(QRect(10, 20, 111, 81));
         logoLabel->setFrameShape(QFrame::Shape::StyledPanel);
         logoLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout_3->addWidget(headerPanel);
+
         loginPanel = new QFrame(centralwidget);
         loginPanel->setObjectName("loginPanel");
-        loginPanel->setGeometry(QRect(400, 130, 426, 453));
         loginPanel->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         loginPanel->setFrameShape(QFrame::Shape::StyledPanel);
         loginPanel->setFrameShadow(QFrame::Shadow::Raised);
@@ -368,14 +373,19 @@ public:
 
         verticalLayout->addWidget(loginButton, 0, Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter);
 
-        label = new QLabel(centralwidget);
+        label = new QLabel(loginPanel);
         label->setObjectName("label");
-        label->setGeometry(QRect(11, 605, 293, 20));
         label->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout->addWidget(label);
+
+
+        verticalLayout_3->addWidget(loginPanel);
+
         LoginUI->setCentralWidget(centralwidget);
         menubar = new QMenuBar(LoginUI);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1278, 25));
+        menubar->setGeometry(QRect(0, 0, 550, 21));
         LoginUI->setMenuBar(menubar);
         statusbar = new QStatusBar(LoginUI);
         statusbar->setObjectName("statusbar");

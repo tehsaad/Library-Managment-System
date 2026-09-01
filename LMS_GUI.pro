@@ -8,17 +8,20 @@ CONFIG += c++17
 
 SOURCES += \
     Dashboard.cpp \
+    issue_books.cpp \
     loginui.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     Dashboard.h \
+    issue_books.h \
     loginui.h \
     mainwindow.h
 
 FORMS += \
     Dashboard.ui \
+    issue_books.ui \
     loginui.ui \
     mainwindow.ui
 

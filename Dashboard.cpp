@@ -20,9 +20,71 @@ Dashboard::~Dashboard()
 }
 
 
-// =========================================================
-// LOAD CSV FILE
-// =========================================================
+void Dashboard::saveCSV(const QString &fileName)
+{
+    QFile file(fileName);
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QMessageBox::warning(
+            this,
+            "CSV Error",
+            "Could not save:\n" + fileName
+            );
+
+        return;
+    }
+
+    QTextStream out(&file);
+
+    // Write headers
+    for (int column = 0;
+         column < ui->dataTable->columnCount();
+         column++)
+    {
+        if (column > 0)
+            out << ",";
+
+        QTableWidgetItem *header =
+            ui->dataTable->horizontalHeaderItem(column);
+
+        if (header)
+            out << header->text();
+    }
+
+    out << "\n";
+
+
+    // Write table data
+    for (int row = 0;
+         row < ui->dataTable->rowCount();
+         row++)
+    {
+        for (int column = 0;
+             column < ui->dataTable->columnCount();
+             column++)
+        {
+            if (column > 0)
+                out << ",";
+
+            QTableWidgetItem *item =
+                ui->dataTable->item(row, column);
+
+            if (item)
+                out << item->text();
+        }
+
+        out << "\n";
+    }
+
+    file.close();
+
+    QMessageBox::information(
+        this,
+        "CSV Saved",
+        "Changes saved successfully!"
+        );
+}
 
 void Dashboard::loadCSV(const QString &fileName)
 {
@@ -89,25 +151,39 @@ void Dashboard::loadCSV(const QString &fileName)
         }
     }
 
+
     file.close();
 }
-
-
-// =========================================================
-// LOGOUT BUTTON
-// =========================================================
 
 void Dashboard::on_logoutButton_clicked()
 {
     close();
 }
 
-
-// =========================================================
-// BOOKS BUTTON
-// =========================================================
-
 void Dashboard::on_booksButton_clicked()
 {
-    loadCSV("Books.csv");
+    loadCSV("data/Books.csv");
 }
+
+void Dashboard::on_historyButton_clicked()
+{
+    loadCSV("data/History.csv");
+}
+
+
+void Dashboard::on_userButton_clicked()
+{
+    loadCSV("data/Users.csv");
+}
+
+void Dashboard::on_facultyButton_clicked()
+{
+    loadCSV("data/Faculty.csv");
+}
+
+
+void Dashboard::on_saveButton_clicked()
+{
+    saveCSV("data/Books.csv");
+}
+

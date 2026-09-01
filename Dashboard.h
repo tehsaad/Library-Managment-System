@@ -21,9 +21,18 @@ private slots:
 
     void on_booksButton_clicked();
 
+    void on_historyButton_clicked();
+
+    void on_userButton_clicked();
+
+    void on_facultyButton_clicked();
+
+    void on_saveButton_clicked();
+
 private:
     Ui::Dashboard *ui;
     void loadCSV(const QString &fileName);
+    void saveCSV(const QString &fileName);
 };
 
 #endif // DASHBOARD_H
