@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "loginui.h"
+#include "volunteerdialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -60,8 +61,7 @@ void MainWindow::on_facultyButton_clicked()
 
 void MainWindow::on_volunteerButton_clicked()
 {
-    hide();
+    VolunteerDialog dialog(this);
 
-    logUI = new LoginUI("Volunteer", this);
-    logUI->show();
+    dialog.exec();
 }

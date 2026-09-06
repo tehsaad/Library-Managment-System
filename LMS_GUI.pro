@@ -8,22 +8,28 @@ CONFIG += c++17
 
 SOURCES += \
     Dashboard.cpp \
+    VolunteerDialog.cpp \
     issue_books.cpp \
     loginui.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    profiledialog.cpp
 
 HEADERS += \
     Dashboard.h \
+    VolunteerDialog.h \
     issue_books.h \
     loginui.h \
-    mainwindow.h
+    mainwindow.h \
+    profiledialog.h
 
 FORMS += \
     Dashboard.ui \
+    VolunteerDialog.ui \
     issue_books.ui \
     loginui.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    profiledialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

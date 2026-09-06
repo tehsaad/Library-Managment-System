@@ -272,18 +272,9 @@ void LoginUI::on_loginButton_clicked()
             }
         }
 
-
-        // -------------------------------------------------
-        // Check username and password
-        // -------------------------------------------------
-
         if (username == csvUsername &&
             password == csvPassword)
         {
-            // ---------------------------------------------
-            // Faculty.csv must also match requested role
-            // ---------------------------------------------
-
             if (loginType == "Faculty" &&
                 userRole != "Faculty")
             {
@@ -295,7 +286,6 @@ void LoginUI::on_loginButton_clicked()
             {
                 continue;
             }
-
 
             loginSuccessful = true;
 
@@ -310,10 +300,6 @@ void LoginUI::on_loginButton_clicked()
     file.close();
 
 
-    // =====================================================
-    // LOGIN RESULT
-    // =====================================================
-
     if (loginSuccessful)
     {
         QMessageBox::information(
@@ -322,12 +308,15 @@ void LoginUI::on_loginButton_clicked()
             "Welcome, " + userName + "!"
             );
 
-
-        // -------------------------------------------------
-        // Open Dashboard
-        // -------------------------------------------------
-
-        Display = new Dashboard();
+        Display = new Dashboard(
+            userID,
+            username,
+            userName,
+            loginType,
+            books,
+            warnings,
+            feeStatus
+            );
 
         Display->show();
 
@@ -343,11 +332,6 @@ void LoginUI::on_loginButton_clicked()
     }
 }
 
-
-// =========================================================
-// BACK BUTTON
-// =========================================================
-
 void LoginUI::on_backButton_clicked()
 {
     this->hide();
@@ -357,11 +341,6 @@ void LoginUI::on_backButton_clicked()
         mainWindow->show();
     }
 }
-
-
-// =========================================================
-// SHOW PASSWORD
-// =========================================================
 
 void LoginUI::on_showPasswordCheckBox_toggled(bool checked)
 {
