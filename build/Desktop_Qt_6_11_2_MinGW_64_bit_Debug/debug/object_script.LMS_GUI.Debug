@@ -4,8 +4,10 @@ debug/issue_books.o
 debug/loginui.o
 debug/main.o
 debug/mainwindow.o
+debug/profiledialog.o
 debug/moc_Dashboard.o
 debug/moc_VolunteerDialog.o
 debug/moc_issue_books.o
 debug/moc_loginui.o
 debug/moc_mainwindow.o
+debug/moc_profiledialog.o

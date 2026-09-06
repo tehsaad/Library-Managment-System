@@ -4,8 +4,10 @@ release/issue_books.o
 release/loginui.o
 release/main.o
 release/mainwindow.o
+release/profiledialog.o
 release/moc_Dashboard.o
 release/moc_VolunteerDialog.o
 release/moc_issue_books.o
 release/moc_loginui.o
 release/moc_mainwindow.o
+release/moc_profiledialog.o
