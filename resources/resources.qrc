@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>theme.qss</file>
+        <file>seed/Books.csv</file>
+        <file>seed/Users.csv</file>
+        <file>seed/Faculty.csv</file>
+        <file>seed/Loans.csv</file>
+        <file>seed/History.csv</file>
+        <file>seed/Volunteers.csv</file>
+    </qresource>
+</RCC>

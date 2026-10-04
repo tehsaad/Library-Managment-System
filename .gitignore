@@ -1,0 +1,23 @@
+# Qt Creator build folders and user settings
+build/
+build-*/
+.qtcreator/
+*.pro.user
+*.pro.user.*
+*.autosave
+.qmake.stash
+
+# Compiled output
+*.o
+*.obj
+*.exe
+Makefile*
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+core_tests
+
+# Editors
+.vscode/
+.idea/
+.claude/
