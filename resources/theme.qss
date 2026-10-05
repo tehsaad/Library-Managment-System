@@ -1,0 +1,383 @@
+/* =========================================================
+   LIBRARY THEME
+   Warm ivory background, clay accent, serif headings.
+   Colors are mirrored in src/ui/Theme.h for code that needs them.
+   ========================================================= */
+
+* {
+    color: #1F1E1B;
+    selection-background-color: #F3DED3;
+    selection-color: #1F1E1B;
+}
+
+QMainWindow, QDialog, QWidget#page, QWidget#welcomePage, QWidget#loginPage, QStackedWidget#contentStack {
+    background: #F5F4EE;
+}
+
+QToolTip {
+    background: #1F1E1B;
+    color: #F5F4EE;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+/* ---------- Typography ---------- */
+
+QLabel[textRole="display"] {
+    font-family: "Georgia";
+    font-size: 34px;
+    color: #1F1E1B;
+}
+
+QLabel[textRole="title"] {
+    font-family: "Georgia";
+    font-size: 26px;
+    color: #1F1E1B;
+}
+
+QLabel[textRole="heading"] {
+    font-family: "Georgia";
+    font-size: 18px;
+    color: #1F1E1B;
+}
+
+QLabel[textRole="eyebrow"] {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #C96442;
+}
+
+QLabel[textRole="muted"] {
+    color: #6E6A60;
+    font-size: 13px;
+}
+
+QLabel[textRole="small"] {
+    color: #8A867B;
+    font-size: 12px;
+}
+
+QLabel[textRole="error"] {
+    color: #B23B3B;
+    background: #F8E6E3;
+    border: 1px solid #EDC9C3;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+QLabel[textRole="notice"] {
+    color: #6B4A12;
+    background: #F7ECD9;
+    border: 1px solid #EBD6B0;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+QLabel[textRole="success"] {
+    color: #3E6541;
+    background: #E8F0E6;
+    border: 1px solid #CADCC6;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+/* ---------- Cards ---------- */
+
+QFrame[card="true"] {
+    background: #FFFFFF;
+    border: 1px solid #E3DFD3;
+    border-radius: 14px;
+}
+
+QLabel[statValue="true"] {
+    font-family: "Georgia";
+    font-size: 30px;
+    color: #1F1E1B;
+}
+
+QLabel[badge="true"] {
+    background: #F6E6DE;
+    color: #C96442;
+    border-radius: 18px;
+    font-family: "Georgia";
+    font-size: 17px;
+}
+
+/* ---------- Role cards on the welcome page ---------- */
+
+QPushButton#roleCard {
+    background: #FFFFFF;
+    border: 1px solid #E3DFD3;
+    border-radius: 14px;
+    text-align: left;
+    padding: 0;
+}
+
+QPushButton#roleCard:hover {
+    border: 1px solid #C96442;
+    background: #FFFDFB;
+}
+
+QPushButton#roleCard:pressed {
+    background: #FAF3EE;
+}
+
+QPushButton#roleCard:focus {
+    border: 2px solid #C96442;
+}
+
+/* ---------- Buttons ---------- */
+
+QPushButton {
+    background: #FFFFFF;
+    border: 1px solid #D6D1C4;
+    border-radius: 8px;
+    padding: 7px 14px;
+    font-size: 13px;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background: #F7F5EF;
+    border-color: #C2BCAD;
+}
+
+QPushButton:pressed {
+    background: #EFECE3;
+}
+
+QPushButton:disabled {
+    color: #AAA59A;
+    background: #F3F1EA;
+    border-color: #E3DFD3;
+}
+
+QPushButton:focus {
+    border: 1px solid #C96442;
+}
+
+QPushButton[variant="primary"] {
+    background: #C96442;
+    border: 1px solid #C96442;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+QPushButton[variant="primary"]:hover {
+    background: #B5583A;
+    border-color: #B5583A;
+}
+
+QPushButton[variant="primary"]:pressed {
+    background: #9F4C32;
+}
+
+QPushButton[variant="primary"]:disabled {
+    background: #E3B9A9;
+    border-color: #E3B9A9;
+    color: #FFFFFF;
+}
+
+QPushButton[variant="danger"] {
+    color: #B23B3B;
+    border-color: #E6C3BE;
+}
+
+QPushButton[variant="danger"]:hover {
+    background: #F8E6E3;
+    border-color: #B23B3B;
+}
+
+QPushButton[variant="link"] {
+    background: transparent;
+    border: none;
+    color: #6E6A60;
+    padding: 4px 0;
+    text-align: left;
+}
+
+QPushButton[variant="link"]:hover {
+    color: #C96442;
+}
+
+/* ---------- Sidebar ---------- */
+
+QFrame#sidebar {
+    background: #EFEDE4;
+    border: none;
+    border-right: 1px solid #E3DFD3;
+}
+
+QLabel#brand {
+    font-family: "Georgia";
+    font-size: 20px;
+    color: #1F1E1B;
+}
+
+QPushButton[nav="true"] {
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 12px;
+    text-align: left;
+    font-size: 14px;
+    color: #3D3A33;
+}
+
+QPushButton[nav="true"]:hover {
+    background: #E6E3D8;
+}
+
+QPushButton[nav="true"]:checked {
+    background: #FFFFFF;
+    color: #1F1E1B;
+    font-weight: 600;
+    border: 1px solid #E3DFD3;
+}
+
+QFrame#userChip {
+    background: #F7F6F0;
+    border: 1px solid #E3DFD3;
+    border-radius: 12px;
+}
+
+/* ---------- Inputs ---------- */
+
+QLineEdit, QSpinBox, QComboBox, QPlainTextEdit {
+    background: #FFFFFF;
+    border: 1px solid #D6D1C4;
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 13px;
+    min-height: 20px;
+}
+
+QLineEdit:focus, QSpinBox:focus, QComboBox:focus, QPlainTextEdit:focus {
+    border: 1px solid #C96442;
+}
+
+QLineEdit:disabled, QSpinBox:disabled, QComboBox:disabled {
+    background: #F3F1EA;
+    color: #8A867B;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+
+QComboBox QAbstractItemView {
+    background: #FFFFFF;
+    border: 1px solid #D6D1C4;
+    selection-background-color: #F6E6DE;
+    outline: none;
+    padding: 4px;
+}
+
+QCheckBox {
+    spacing: 8px;
+    font-size: 13px;
+    color: #3D3A33;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #C2BCAD;
+    border-radius: 4px;
+    background: #FFFFFF;
+}
+
+QCheckBox::indicator:checked {
+    background: #FFFFFF;
+    border: 5px solid #C96442;
+    width: 8px;
+    height: 8px;
+}
+
+/* ---------- Tables ---------- */
+
+QTableWidget {
+    background: #FFFFFF;
+    alternate-background-color: #FBFAF6;
+    border: 1px solid #E3DFD3;
+    border-radius: 12px;
+    gridline-color: transparent;
+    font-size: 13px;
+    outline: none;
+}
+
+QTableWidget::item {
+    padding: 6px 10px;
+    border-bottom: 1px solid #F0EDE5;
+}
+
+QTableWidget::item:selected {
+    background: #F6E6DE;
+    color: #1F1E1B;
+}
+
+QHeaderView::section {
+    background: #FAF9F5;
+    color: #6E6A60;
+    border: none;
+    border-bottom: 1px solid #E3DFD3;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+QTableCornerButton::section {
+    background: #FAF9F5;
+    border: none;
+}
+
+/* ---------- Scrollbars ---------- */
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 4px 2px;
+}
+
+QScrollBar::handle:vertical {
+    background: #D6D1C4;
+    border-radius: 3px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #C2BCAD;
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px;
+    margin: 2px 4px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #D6D1C4;
+    border-radius: 3px;
+    min-width: 30px;
+}
+
+QScrollBar::add-line, QScrollBar::sub-line,
+QScrollBar::add-page, QScrollBar::sub-page {
+    background: none;
+    border: none;
+    width: 0;
+    height: 0;
+}
+
+/* ---------- Message boxes ---------- */
+
+QMessageBox {
+    background: #FFFFFF;
+}
+
+QMessageBox QLabel {
+    font-size: 13px;
+}
