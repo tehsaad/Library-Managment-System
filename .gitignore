@@ -21,3 +21,6 @@ core_tests
 .vscode/
 .idea/
 .claude/
+
+# Cross-build output (the zip in release/ is committed on purpose)
+dist/

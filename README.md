@@ -10,6 +10,23 @@ to show each OOP idea clearly (see the table below).
 
 ---
 
+## Testing the ready-made Windows .exe
+
+This branch (`windows-exe`) contains a pre-built program, so you can try it
+without installing Qt:
+
+1. Download `release/LMS_GUI-windows-x64.zip` from this branch
+   (open the file on GitHub and click **Download raw file**).
+2. Right-click the zip, choose **Extract All...**.
+3. Open the extracted `LMS_GUI` folder and double-click **`LMS_GUI.exe`**.
+   Keep the `.dll` files and the `platforms` folder next to it.
+
+Windows SmartScreen may say "Windows protected your PC" because the exe is
+not signed: click **More info → Run anyway**. Requires 64-bit Windows 10 or 11.
+
+The exe was cross-compiled from Linux with `scripts/build-windows-exe.sh`
+(Qt 6.10.2, llvm-mingw).
+
 ## Running it
 
 1. Open `LMS_GUI.pro` in **Qt Creator** (Qt 6, MinGW or GCC kit).
